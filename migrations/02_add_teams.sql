@@ -1,0 +1,4 @@
+ALTER TABLE sessions ADD COLUMN team1_name VARCHAR(255) DEFAULT 'Team 1';
+ALTER TABLE sessions ADD COLUMN team2_name VARCHAR(255) DEFAULT 'Team 2';
+ALTER TABLE sessions ADD COLUMN team1_players JSONB DEFAULT '[]';
+ALTER TABLE sessions ADD COLUMN team2_players JSONB DEFAULT '[]';
