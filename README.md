@@ -31,7 +31,7 @@ The application provides separate features for Admin and Player users with secur
 - Create sports sessions
 - Join sports sessions
 - View all sessions
-- View attendance/session details
+- View session details
 - View reports of completed sessions
 - Analyze sports popularity for a selected period
 - Change password
@@ -42,8 +42,8 @@ The application uses session-based authentication with Passport.js.
 
 There are two user roles:
 
-- **Admin**
-- **Player**
+- Admin
+- Player
 
 Role-based middleware is used to protect admin-only features.
 
@@ -77,66 +77,22 @@ Database schema and changes are maintained using SQL migration files.
 
 ## Project Structure
 
-```text
-Sports-Scheduler/
-│
-├── migrations/
-│   ├── 01_initial_schema.sql
-│   ├── 02_add_teams.sql
-│   └── 03_password_reset.sql
-│
-├── public/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── js/
-│   │   ├── api.js
-│   │   ├── app.js
-│   │   ├── ui.js
-│   │   └── components/
-│   │       ├── account.js
-│   │       ├── admin.js
-│   │       ├── auth.js
-│   │       └── player.js
-│   │
-│   └── index.html
-│
-├── src/
-│   ├── config/
-│   │   └── db.js
-│   │
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── reportController.js
-│   │   ├── sessionController.js
-│   │   └── sportController.js
-│   │
-│   ├── middleware/
-│   │   └── auth.js
-│   │
-│   ├── passport/
-│   │   └── config.js
-│   │
-│   └── routes/
-│       ├── auth.js
-│       ├── health.js
-│       ├── reports.js
-│       ├── sessions.js
-│       └── sports.js
-│
-├── .env.example
-├── .gitignore
-├── package.json
-├── server.js
-└── README.md
+- migrations/ - Database migration files
+- public/ - Frontend files
+- public/css/ - Application styles
+- public/js/ - Frontend JavaScript
+- public/js/components/ - Authentication, player, admin and account components
+- src/ - Backend application
+- src/config/ - Database configuration
+- src/controllers/ - Application controllers
+- src/middleware/ - Authentication middleware
+- src/passport/ - Passport authentication configuration
+- src/routes/ - API routes
+- .env.example - Environment variable template
+- package.json - Project dependencies and scripts
+- server.js - Application entry point
+- README.md - Project documentation
 
-### Step 2
-
-**Click after that closing ` ``` ` and press Enter.**
-
-Then paste this:
-
-```md
 ## Screenshots
 
 ### Homepage
@@ -161,11 +117,11 @@ Then paste this:
 
 ### Create Session - Team Selection
 
-![Create Session Team Selection](Screenshots/create-session-team-selection.png)
+![Create Session Team Selection](Screenshots/create-session%20%282%29.png)
 
 ### Create Session - Details
 
-![Create Session Details](Screenshots/create-session-details.png)
+![Create Session Details](Screenshots/create-session%20%283%29.png)
 
 ### My Created Sessions
 
@@ -181,7 +137,7 @@ Then paste this:
 
 ### Cancelled Session Details
 
-![Cancelled Session Details](Screenshots/cancelled-session-details.png)
+![Cancelled Session Details](Screenshots/cancelled-session%20image.png)
 
 ### Change Password
 
@@ -193,4 +149,45 @@ https://sports-scheduler-sv7f.onrender.com
 
 ## Demo Video
 
-<!-- Add your demo video link here -->
+Demo video link will be added here.
+
+## Deployment
+
+The application is deployed using Render.
+
+The backend server and PostgreSQL database are hosted in the cloud.
+
+## Security
+
+- Passwords are securely hashed before storage.
+- Session-based authentication is used.
+- Protected routes require authentication.
+- Admin-only routes use role-based authorization.
+- Environment variables are used for sensitive configuration.
+- The .env file is excluded from Git.
+
+## Special Features
+
+- Role-based Admin and Player dashboards
+- Sports session creation and joining
+- Team-based player selection
+- Session cancellation with cancellation reason
+- Separate created and joined session sections
+- Admin reports with configurable time periods
+- Sports popularity analysis
+- Password change functionality
+- PostgreSQL database integration
+- Cloud deployment using Render
+
+## Future Enhancements
+
+- Email notifications for session invitations and cancellations
+- Player availability tracking
+- Advanced participation analytics
+- Automated reminders for upcoming sessions
+
+## Author
+
+Asma Shaik
+
+B.Tech - Artificial Intelligence and Machine Learning
