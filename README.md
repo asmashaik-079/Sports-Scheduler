@@ -1,98 +1,81 @@
 # Sports Scheduler
 
-A full-stack web application for creating, joining, managing, and tracking sports sessions.
+Sports Scheduler is a full-stack web application that allows players to create, join, manage, and cancel sports sessions. Administrators can manage available sports and view reports of completed sessions.
 
-Sports Scheduler provides separate Admin and Player experiences. Players can create and join sports sessions, while administrators can manage available sports and view session reports.
+The application provides separate features for Admin and Player users with secure authentication and role-based access.
 
-## 🚀 Live Application
+## Features
 
-**Live URL:** https://sports-scheduler-sv7f.onrender.com
-
-## ✨ Features
-
-### 👤 Player Features
+### Player Features
 
 - Player registration and login
-- Secure session-based authentication
-- View available sports
-- Create sports sessions
-- Select date, time, venue, and sport
-- Add existing players to teams
+- Create a new sports session
+- Select a sport
+- Select players and teams
 - Specify additional players required
-- View sessions created by the player
-- Browse available sessions
+- Set date, time, and venue
+- View available sports sessions
 - Join existing sessions
 - View joined sessions separately
-- Joined player information is visible to participants
-- Prevent joining past sessions
+- View sessions created by the player
 - Cancel sessions created by the player
 - Provide a cancellation reason
+- View cancelled session details
 - Change password
-- Forgot password functionality
+- Prevent joining past sessions
 
-### 🛡️ Admin Features
+### Admin Features
 
-- Secure Admin login
-- Admin dashboard
+- Admin login
 - Create and manage available sports
-- Admin can create sports sessions
-- Admin can join sports sessions
-- View session information
-- View reports of sessions played
-- Analyze sports popularity over a selected period
-- Manage sports scheduling activities
+- Create sports sessions
+- Join sports sessions
+- View all sessions
+- View attendance/session details
+- View reports of completed sessions
+- Analyze sports popularity for a selected period
+- Change password
 
-### 🔐 Authentication & Security
+## Authentication
 
-- Passport.js authentication
-- Session-based authentication
-- Role-based access control
-- Separate Admin and Player permissions
-- Password hashing using bcrypt
-- Secure production session cookies
-- HTTPS-compatible authentication for Render deployment
+The application uses session-based authentication with Passport.js.
 
-## 🛠️ Technologies Used
+There are two user roles:
 
-### Frontend
+- **Admin**
+- **Player**
+
+Role-based middleware is used to protect admin-only features.
+
+## Technologies Used
+
+- Node.js
+- Express.js
+- PostgreSQL
+- Passport.js
 - HTML5
 - CSS3
 - JavaScript
-- Bootstrap
-
-### Backend
-- Node.js
-- Express.js
-- Passport.js
-
-### Database
-- PostgreSQL
-
-### Security
-- bcryptjs
-- Express Session
-- Helmet
-- Express Rate Limit
-
-### Deployment
+- REST APIs
+- Git & GitHub
 - Render
-- GitHub
 
-## 🗄️ Database
+## Database
 
-The application uses PostgreSQL for storing:
+PostgreSQL is used as the database.
+
+The database contains information related to:
 
 - Users
 - Sports
-- Sports sessions
-- Team information
-- Player participation
-- Session cancellations
-- Password reset information
+- Sessions
+- Teams
+- Session participants
+- Password reset functionality
 
-Database migrations are available in the `migrations/` directory.
+Database schema and changes are maintained using SQL migration files.
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Sports-Scheduler/
@@ -104,56 +87,45 @@ Sports-Scheduler/
 │
 ├── public/
 │   ├── css/
+│   │   └── style.css
+│   │
 │   ├── js/
+│   │   ├── api.js
+│   │   ├── app.js
+│   │   ├── ui.js
+│   │   └── components/
+│   │       ├── account.js
+│   │       ├── admin.js
+│   │       ├── auth.js
+│   │       └── player.js
+│   │
 │   └── index.html
 │
 ├── src/
 │   ├── config/
+│   │   └── db.js
+│   │
 │   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── reportController.js
+│   │   ├── sessionController.js
+│   │   └── sportController.js
+│   │
 │   ├── middleware/
+│   │   └── auth.js
+│   │
 │   ├── passport/
+│   │   └── config.js
+│   │
 │   └── routes/
+│       ├── auth.js
+│       ├── health.js
+│       ├── reports.js
+│       ├── sessions.js
+│       └── sports.js
 │
 ├── .env.example
+├── .gitignore
 ├── package.json
 ├── server.js
 └── README.md
-
-
-## Screenshots
-
-### Homepage
-![Homepage](Screenshots/homepage.png)
-
-### Admin Dashboard
-![Admin Dashboard](Screenshots/Admin-dashboard.png)
-
-### Admin Reports
-![Admin Reports](Screenshots/admin-reports.png)
-
-### Available Sessions
-![Available Sessions](Screenshots/available-sessions.png)
-
-### Create Session
-![Create Session](Screenshots/create-session.png)
-
-### Create Session - Team Selection
-![Create Session Team Selection](Screenshots/create-session%20%282%29.png)
-
-### Create Session - Details
-![Create Session Details](Screenshots/create-session%20%283%29.png)
-
-### My Created Sessions
-![My Created Sessions](Screenshots/my-created.png)
-
-### My Joined Sessions
-![My Joined Sessions](Screenshots/my-joined.png)
-
-### Cancelled Session
-![Cancelled Session](Screenshots/cancelled-session.png)
-
-### Cancelled Session Details
-![Cancelled Session Details](Screenshots/cancelled-session%20image.png)
-
-### Change Password
-![Change Password](Screenshots/change-password.png)
