@@ -118,3 +118,42 @@ Sports-Scheduler/
 ├── package.json
 ├── server.js
 └── README.md
+
+
+## Screenshots
+
+### Homepage
+![Homepage](Screenshots/homepage.png)
+
+### Admin Dashboard
+![Admin Dashboard](Screenshots/Admin-dashboard.png)
+
+### Admin Reports
+![Admin Reports](Screenshots/admin-reports.png)
+
+### Available Sessions
+![Available Sessions](Screenshots/available-sessions.png)
+
+### Create Session
+![Create Session](Screenshots/create-session.png)
+
+### Create Session - Team Selection
+![Create Session Team Selection](Screenshots/create-session%20%282%29.png)
+
+### Create Session - Details
+![Create Session Details](Screenshots/create-session%20%283%29.png)
+
+### My Created Sessions
+![My Created Sessions](Screenshots/my-created.png)
+
+### My Joined Sessions
+![My Joined Sessions](Screenshots/my-joined.png)
+
+### Cancelled Session
+![Cancelled Session](Screenshots/cancelled-session.png)
+
+### Cancelled Session Details
+![Cancelled Session Details](Screenshots/cancelled-session%20image.png)
+
+### Change Password
+![Change Password](Screenshots/change-password.png)
