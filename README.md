@@ -149,7 +149,9 @@ https://sports-scheduler-sv7f.onrender.com
 
 ## Demo Video
 
-Demo video link will be added here.
+## Demo Video
+
+[Watch the Sports Scheduler Demo](https://youtu.be/a3HiUpBdxZ0)
 
 ## Deployment
 
@@ -185,9 +187,3 @@ The backend server and PostgreSQL database are hosted in the cloud.
 - Player availability tracking
 - Advanced participation analytics
 - Automated reminders for upcoming sessions
-
-## Author
-
-Asma Shaik
-
-B.Tech - Artificial Intelligence and Machine Learning
